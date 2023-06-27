@@ -1,0 +1,81 @@
+nfa> display
+Error! NFA has not been initialized.
+nfa> init 0
+Error! Size has to be greater than 0.
+nfa> init -1
+Error! Size has to be greater than 0.
+nfa> init abc
+Error! First argument has to be an integer
+nfa> init 1
+nfa> display
+nfa> add 1 1 a
+nfa> add 1 1 ~
+nfa> add 1 2 b
+Error! Transition provided is not valid.
+nfa> add 2 1 c
+Error! Transition provided is not valid.
+nfa> add a b 2
+Error! First and second argument have to be an integer
+nfa> add 1 1 1
+Error! Transition provided is not valid.
+nfa> display
+(1, 1) ~
+(1, 1) a
+nfa> generate
+nfa> display
+(1, 2) ~
+(2, 2) ~
+(2, 3) a
+(2, 4) ~
+(3, 4) ~
+(3, 4) b
+(4, 1) ~
+(4, 5) a
+nfa> check
+Error! Word has to be wrapped in double quotes ("w")
+nfa> check ab
+Error! Word has to be wrapped in double quotes ("w")
+nfa> check "ab"
+Not in language.
+nfa> check "aa"
+In language.
+nfa> prefix "ab"
+"a"
+nfa> prefix "a"
+"a"
+nfa> prefix ""
+No prefix in language.
+nfa> prefix "b"
+No prefix in language.
+nfa> check "aaaaaaaaaaaaabaaaaaaaaaba"
+In language.
+nfa> prefix "aaaaaaaaaaaaabaaaaaaaaaaabaaaaaaaabbaaaaaaaababababbbbbbbbbab"
+"aaaaaaaaaaaaabaaaaaaaaaaabaaaaaaaa"
+nfa> quit
+
+nfa>
+Error! Invalid! Try again.
+nfa>
+Error! Invalid! Try again.
+nfa> yes
+Error! Not a valid command.
+nfa> 123
+Error! Not a valid command.
+nfa> 34ß9013840ß0qewirp o rsadf asdf asf 932w4 wq rs
+Error! Not a valid command.
+nfa> prefix
+Error! NFA has not been initialized.
+nfa> generate
+nfa> prefix
+Error! Word has to be wrapped in double quotes ("w")
+nfa> prefix
+Error! Word has to be wrapped in double quotes ("w")
+nfa> prefix 3e439ß0q f0ßdasf
+Error! Word has to be wrapped in double quotes ("w")
+nfa> add 324 eq34 r34 3 4r312
+Error! Third argument needs to be a character.
+nfa> add
+Error! Not enough arguments supplied.
+nfa> init
+Error! Not enough arguments supplied.
+nfa> quit
